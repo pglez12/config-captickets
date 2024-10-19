@@ -1,0 +1,10 @@
+server:
+  port: 3333
+spring:
+  cloud: 
+   gateway: 
+    routes:
+      - id: eventos
+        uri: lb://eventos/
+        predicates:
+          - Path=/eventos/**
